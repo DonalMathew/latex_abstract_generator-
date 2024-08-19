@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+</head>
+<body>
+    <h1>Abstract Generator</h1>
+    <form action="{{ url_for('generate') }}" method="POST">
+        <div>
+            <label for="heading">Abstract Heading:</label>
+            <input type="text" id="heading" name="heading" required>
+        </div>
+        <div>
+            <label for="body">Abstract Body:</label>
+            <textarea id="body" name="body" required></textarea>
+        </div>
+        <div>
+            <label for="student_name">Student Name:</label>
+            <input type="text" id="student_name" name="student_name" required>
+        </div>
+        <div>
+            <label for="faculty_name">Faculty Name:</label>
+            <input type="text" id="faculty_name" name="faculty_name" required>
+        </div>
+        <button type="submit">Generate Abstract</button>
+    </form>
+</body>
+</html>
