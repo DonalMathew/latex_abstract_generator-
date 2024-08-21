@@ -48,7 +48,7 @@ def generate():
         new_ref5=ref5
     else:
         new_ref5 = f"""\\item {ref5}"""
-    if not ref1:
+    if not ref6:
         new_ref6=ref6
     else:
         new_ref6 = f"""\\item {ref6}"""
