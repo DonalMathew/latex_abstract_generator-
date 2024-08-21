@@ -16,7 +16,49 @@ def generate():
     student_rollno = request.form['student_rollno']
     faculty_name = request.form['faculty_name']
     body = request.form['body']
+    ref1 = request.form['ref1']
+    ref2 = request.form['ref2']
+    ref3 = request.form['ref3']
+    ref4 = request.form['ref4']
+    ref5 = request.form['ref5']
+    ref6 = request.form['ref6']
     
+
+
+
+
+    #check whether form-field is null
+    if not ref1:
+        new_ref1=ref1
+    else:
+        new_ref1 = f"""\\item {ref1}"""
+    if not ref2:
+        new_ref2=ref2
+    else:
+        new_ref2 = f"""\\item {ref2}"""
+    if not ref3:
+        new_ref3=ref3
+    else:
+        new_ref3 = f"""\\item {ref3}"""
+    if not ref4:
+        new_ref4=ref4
+    else:
+        new_ref4 = f"""\\item {ref4}"""
+    if not ref5:
+        new_ref5=ref5
+    else:
+        new_ref5 = f"""\\item {ref5}"""
+    if not ref1:
+        new_ref6=ref6
+    else:
+        new_ref6 = f"""\\item {ref6}"""
+    
+
+
+
+
+
+
     # Updated LaTeX template
     latex_template = f"""
     \\documentclass{{article}}
@@ -51,10 +93,12 @@ def generate():
     \\section*{{References}}
 
     \\begin{{enumerate}}
-        \\item Horst Possegger, Thomas Mauthner, and Horst Bischof. \\textit{{In Defense of Color-based Model-free Tracking}}. In Proc. CVPR 2015.
-        \\item Ahmad Ali, Abdul Jaleel. \\textit{{Visual Object Tracking, Classical and Contemporary Approaches}}. In Frontiers of Computer Science. Higher Education Press and Springer-Verlag Berlin Heidelberg, 2015.
-        \\item Xi Li, Weiming Hu, Chunhua Shen, Zhongfei Zhang, Anthony Dick, Anton vanden Hengel. \\textit{{A Survey of Appearance Models in Visual Object Tracking}}. ACM Transactions on Intelligent Systems and Technology, 2013.
-        \\item 
+        {new_ref1}
+        {new_ref2}
+        {new_ref3}
+        {new_ref4}
+        {new_ref5}
+        {new_ref6} 
     \\end{{enumerate}}
 
     \\end{{document}}
