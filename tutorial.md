@@ -21,14 +21,14 @@ Building a website that generates LaTeX-formatted abstracts is a great idea. Her
        <label for="heading">Abstract Heading:</label>
        <input type="text" id="heading" name="heading" required><br><br>
 
-       <label for="body">Abstract Body:</label>
-       <textarea id="body" name="body" required></textarea><br><br>
-
        <label for="student-name">Student Name:</label>
        <input type="text" id="student-name" name="student-name" required><br><br>
 
        <label for="faculty-name">Faculty Name:</label>
        <input type="text" id="faculty-name" name="faculty-name" required><br><br>
+
+       <label for="body">Abstract Body:</label>
+       <textarea id="body" name="body" required></textarea><br><br>
 
        <input type="submit" value="Generate Abstract">
    </form>
